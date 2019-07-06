@@ -1,2 +1,7 @@
+import logging
+
+from eszett import eszett
+
 if __name__ == '__main__':
-    print("eszett - easy-peasy casting")
+    logging.basicConfig(level=logging.INFO)
+    eszett.start()
