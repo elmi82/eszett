@@ -28,7 +28,6 @@
         },
         "evdev": {
             "hashes": [
-                "sha256:023116eb8b060a15a8f93b3d7b7f02e802a83b26d481c2a0c047d1476d61fd46",
                 "sha256:b03f5e1be5b4a5327494a981b831d251a142b09e8778eda1a8b53eba91100166"
             ],
             "index": "pypi",
