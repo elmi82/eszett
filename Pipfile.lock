@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "874d25d7ebabbd773bca3f06a14a916cd6e6c09f8719fd7942e68951baf1e5ae"
+            "sha256": "baa2772f1188e6f1826ef17efa1eb0f77efa5221761f4d647a167a46ef520532"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -40,6 +40,13 @@
                 "sha256:ba6d5c59906a85ac23dadfe5c88deaf3e179ef565f4898671253e50a78680718"
             ],
             "version": "==4.7.1"
+        },
+        "casttube": {
+            "hashes": [
+                "sha256:0979c7126e7bd6a09ebe45b819dcdfeb9b77839c2650b5b97333168150c4265c",
+                "sha256:f25b3c634efe702896233690f7590e8d6311590910f18dbb763b90419d9ef53c"
+            ],
+            "version": "==0.2.0"
         },
         "certifi": {
             "hashes": [
@@ -101,6 +108,12 @@
                 "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
             ],
             "version": "==2.8"
+        },
+        "ifaddr": {
+            "hashes": [
+                "sha256:c19c64882a7ad51a394451dabcbbed72e98b5625ec1e79789924d5ea3e3ecb93"
+            ],
+            "version": "==0.1.6"
         },
         "lxml": {
             "hashes": [
@@ -201,6 +214,14 @@
             ],
             "version": "==0.2.5"
         },
+        "pychromecast": {
+            "hashes": [
+                "sha256:828afb54261e6dd07031bd67428de4374eb20a9da339e9b7cb3601466339dbc5",
+                "sha256:da8a5a5a0d6c1046e818b586b247dd41f556ffa2a2e80f09cff6497c2db5879e"
+            ],
+            "index": "pypi",
+            "version": "==3.2.2"
+        },
         "pycryptodomex": {
             "hashes": [
                 "sha256:029c7a150347c81899c14de0e4d5f918b8a0c68e8b0108dbe6192ad24358a845",
@@ -290,6 +311,13 @@
                 "sha256:eb7ec9d811f3cf062fb943ce369a9b34a9f291037217ecf5a40a5f2421d29c0a"
             ],
             "version": "==1.1.2"
+        },
+        "zeroconf": {
+            "hashes": [
+                "sha256:21d02538ff52fc572e1d785c692b97b8d4374623cb95d593cc06ab92bd5aaf61",
+                "sha256:e0c333b967c48f8b2e5cc94a1d4d28893023fb06dfd797ee384a94cdd1d0eef5"
+            ],
+            "version": "==0.23.0"
         }
     },
     "develop": {}
