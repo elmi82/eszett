@@ -12,11 +12,12 @@ from eszett.cards.exceptions import CardNotFoundError
 class Database(object):
     DB_PATH = f"{os.path.dirname(resources.__file__)}/database.json"
 
-    def __init__(self, card_queue: Queue):
+    def __init__(self, card_queue: Queue, playlist_queue: Queue):
         self.__logger = logging.getLogger(__name__)
         self.__db = TinyDB(Database.DB_PATH, sort_keys=True, indent=4, separators=(',', ': '))
         self.__card_query = Query()
         self.card_queue = card_queue
+        self.playlist_queue = playlist_queue
 
     def get_card_details(self, card_id: str) -> CardDetails:
         results = self.__db.search(self.__card_query.id == card_id)
@@ -36,5 +37,6 @@ class Database(object):
                 pass
             else:
                 self.__logger.info(f"Received Card (ID: {card_details.card_id})")
+                await self.playlist_queue.put(card_details)
             finally:
                 self.card_queue.task_done()
