@@ -28,7 +28,11 @@ class Player(object):
             sys.exit(1)
 
         chromecasts = pychromecast.get_chromecasts()
-        device = next(cc for cc in chromecasts if cc.device.friendly_name == Player.CHROMECAST_DEVICE_NAME)
+        device = next(
+            cc
+            for cc in chromecasts
+            if cc.device.friendly_name == Player.CHROMECAST_DEVICE_NAME
+        )
         device.wait()
         self.__media_controller = device.media_controller
         self.__media_controller.register_status_listener(self)
@@ -55,7 +59,11 @@ class Player(object):
             self.__logger.info(f"Started playing song {self.__state.current_song}")
             self.__state.started = True
 
-        if status.idle_reason == 'FINISHED' and status.player_is_idle and self.__state.started:
+        if (
+            status.idle_reason == "FINISHED"
+            and status.player_is_idle
+            and self.__state.started
+        ):
             self.__logger.info(f"Finished playing song {self.__state.current_song}")
             self.play_next_song()
 
@@ -72,7 +80,11 @@ class Player(object):
             pass
         else:
             self.__logger.info(f"Playing next song {current_song}")
-            self.__state.current_song_url = self.__gmusic_client.get_stream_url(current_song)
-            self.__media_controller.play_media(self.__state.current_song_url, 'audio/mpeg')
+            self.__state.current_song_url = self.__gmusic_client.get_stream_url(
+                current_song
+            )
+            self.__media_controller.play_media(
+                self.__state.current_song_url, "audio/mpeg"
+            )
             self.__cast_state.set_to_status(self.__media_controller.status)
             self.__media_controller.block_until_active()

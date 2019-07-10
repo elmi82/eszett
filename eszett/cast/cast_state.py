@@ -13,7 +13,11 @@ class CastState(object):
 
     @property
     def has_changed(self) -> bool:
-        return self.content_changed or self.player_state_changed or self.idle_reason_changed
+        return (
+            self.content_changed
+            or self.player_state_changed
+            or self.idle_reason_changed
+        )
 
     def reset_state(self):
         self.content_changed = False

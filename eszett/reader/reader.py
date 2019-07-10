@@ -12,7 +12,9 @@ class CardReader(object):
         self.__logger = logging.getLogger(__name__)
         self.card_queue = card_queue
         devices = [InputDevice(path) for path in list_devices()]
-        self.__device = next(device for device in devices if device.name == self.DEVICE_NAME)
+        self.__device = next(
+            device for device in devices if device.name == self.DEVICE_NAME
+        )
         self.__card_id = ""
 
     async def read_cards(self):
@@ -27,5 +29,3 @@ class CardReader(object):
                         self.__card_id = ""
                     else:
                         self.__card_id += ecodes.KEY[event.code][-1:]
-
-

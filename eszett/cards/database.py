@@ -14,7 +14,9 @@ class Database(object):
 
     def __init__(self, card_queue: Queue, playlist_queue: Queue):
         self.__logger = logging.getLogger(__name__)
-        self.__db = TinyDB(Database.DB_PATH, sort_keys=True, indent=4, separators=(',', ': '))
+        self.__db = TinyDB(
+            Database.DB_PATH, sort_keys=True, indent=4, separators=(",", ": ")
+        )
         self.__card_query = Query()
         self.card_queue = card_queue
         self.playlist_queue = playlist_queue
