@@ -1,0 +1,8 @@
+[Unit]
+Description=eszett
+
+[Service]
+Type=simple
+WorkingDirectory=/TBD
+ExecStart=/usr/bin/pipenv run eszett
+KillSignal=SIGINT
