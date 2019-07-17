@@ -1,0 +1,23 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "eszett"
+author = "Timo Streckfuß"
+author-email = "elmi82@gmail.com"
+home-page = "https://eszett.readthedocs.io/en/latest/"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires = [
+    "asyncio==3.4.3",
+    "evdev==1.2.0",
+    "gmusicapi==12.1.0",
+    "pychromecast==3.2.2",
+    "tinydb==3.13.0"
+]
+requires-python = ">=3.7"
+
+[tool.flit.scripts]
+eszett = "eszett.__main__:main"
+
+

@@ -3,7 +3,8 @@ import logging
 
 from eszett import eszett
 
-if __name__ == "__main__":
+
+def main(args=None):
     logging.basicConfig(level=logging.INFO)
 
     try:
@@ -13,3 +14,7 @@ if __name__ == "__main__":
         pass
     finally:
         logging.info("Thank you and goodbye")
+
+
+if __name__ == "__main__":
+    main()
