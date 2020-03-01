@@ -12,7 +12,7 @@ from eszett.cast.player_state import PlayerState
 
 
 class Player(object):
-    CHROMECAST_DEVICE_NAME = "Büro Mini"
+    CHROMECAST_DEVICE_NAME = "Drache"
 
     def __init__(self, playlist_queue: Queue):
         self.__logger = logging.getLogger(__name__)
