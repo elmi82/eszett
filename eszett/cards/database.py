@@ -26,7 +26,7 @@ class Database(object):
         if not results:
             raise CardNotFoundError
 
-        return CardDetails(card_id, results[0].get("playlist"))
+        return CardDetails(card_id, results[0].get("query"))
 
     async def listen(self):
         while True:

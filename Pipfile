@@ -11,6 +11,9 @@ evdev = "*"
 tinydb = "*"
 gmusicapi = "*"
 pychromecast = "*"
+google-auth-oauthlib = "*"
+google-assistant-library = "*"
+pathlib2 = "*"
 
 [requires]
 python_version = "3"

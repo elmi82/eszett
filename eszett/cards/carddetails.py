@@ -1,7 +1,8 @@
 from typing import List
+from dataclasses import dataclass
 
 
-class CardDetails(object):
-    def __init__(self, card_id: str, playlist: List[str]):
-        self.card_id = card_id
-        self.playlist = playlist
+@dataclass
+class CardDetails:
+    card_id: str
+    query: str
