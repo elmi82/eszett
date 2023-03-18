@@ -61,7 +61,7 @@ class GoogleAssistant(object):
                     or event.type == EventType.ON_MEDIA_STATE_IDLE
                 ):
                     card_details = await self.playlist_queue.get()
-                    query = f"Spiel {card_details.query} im {GoogleAssistant.GOOGLE_HOME_DEVICE_NAME}"
+                    query = f"Spiel meine Playlist {card_details.query} auf Spotify im {GoogleAssistant.GOOGLE_HOME_DEVICE_NAME}"
                     self.__logger.info(f"Sending query {query}")
                     assistant.send_text_query(query)
                     self.playlist_queue.task_done()
